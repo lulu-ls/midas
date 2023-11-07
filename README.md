@@ -24,12 +24,12 @@ import (
 ```go
 	vir := midas.NewMidas("")
 	//vir.IsSandbox = true
-	vir.OfferId = ""
-	vir.ZoneId = ""
-	vir.Env = 0
+	vir.OfferId = "" // 配置
+	vir.ZoneId = "" // 配置
+	vir.Env = 0 // 是否是正式环境
 
-	vir.SessKey = ""
-	vir.AccToken = ""
+	vir.SessKey = "" // 用户的 session key
+	vir.AccToken = "" // access token
 
 	// 查询游戏币余额
 	res, err := vir.GetBalance(&midas.BalanceRequest{
