@@ -17,7 +17,7 @@ go get github.com/lulu-ls/midas
 ```go
 import (
 	"errors"
-  "fmt"
+  	"fmt"
 	"github.com/lulu-ls/midas"
 )
 
