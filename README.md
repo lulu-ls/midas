@@ -19,10 +19,10 @@ import (
 	"errors"
   	"fmt"
 	"github.com/lulu-ls/midas"
-)
-
-
-vir := midas.NewMidas("")
+)	
+```
+```go
+	vir := midas.NewMidas("")
 	//vir.IsSandbox = true
 	vir.OfferId = ""
 	vir.ZoneId = ""
@@ -47,8 +47,8 @@ vir := midas.NewMidas("")
 
 	fmt.Println(res)
 
-// 扣除代币
-res, err := vir.Pay(&PayRequest{
+	// 扣除代币
+	res, err := vir.Pay(&PayRequest{
 		CommonRequest: CommonRequest{
 			OpenId: "",
 		},
@@ -65,7 +65,7 @@ res, err := vir.Pay(&PayRequest{
 	}
 
 	fmt.Println(res)
-  
+
 ```
 
 ## 联系方式
