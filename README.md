@@ -13,6 +13,61 @@ https://github.com/lulu-ls/midas
 ## 安装
 go get github.com/lulu-ls/midas
 
+## 使用
+```go
+import (
+	"errors"
+  "fmt"
+	"github.com/lulu-ls/midas"
+)
+
+
+vir := midas.NewMidas("")
+	//vir.IsSandbox = true
+	vir.OfferId = ""
+	vir.ZoneId = ""
+	vir.Env = 0
+
+	vir.SessKey = ""
+	vir.AccToken = ""
+
+	// 查询游戏币余额
+	res, err := vir.GetBalance(&midas.BalanceRequest{
+		CommonRequest: midas.CommonRequest{
+		OpenId: "",
+		//UserIp: f_ctx.GetIp(ctx), // 获取 ip
+	},
+	})
+	if err != nil {
+		if errors.Is(err, midas.ErrorIsSessionKeyInvalid) { // 判断是否 session key 失效，需要用户重新登录 401
+
+		}
+		fmt.Println(err)
+	}
+
+	fmt.Println(res)
+
+// 扣除代币
+res, err := vir.Pay(&PayRequest{
+		CommonRequest: CommonRequest{
+			OpenId: "",
+		},
+		Amount:  100,
+		BillNo:  "",
+		PayItem: "",
+		Remark:  "测试支付",
+	})
+	if err != nil {
+		if errors.Is(err, ErrorIsSessionKeyInvalid) { // 判断是否 session key 失效，需要用户重新登录 401
+
+		}
+		fmt.Println(err)
+	}
+
+	fmt.Println(res)
+  
+```
+
 ## 联系方式
 QQ群: 312533472
 
