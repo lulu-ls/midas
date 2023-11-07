@@ -1,7 +1,8 @@
 # wechat midas pay SDK for golang
+## 微信虚拟支付 文档地址：https://docs.qq.com/doc/DVUN0QWJja0J5c2x4，大家注意看下文档版本是否和自己需要的一样 这个对接的是 v2
 https://github.com/lulu-ls/midas
 
-## 简介
+## 简介（目前只用到了两个接口，其他的接口如果有需要和我联系，我尽快加上）
 | 接口  | 状态                    |
 |---------------:|:---------|
 | 获取余额   | 已完成          |
