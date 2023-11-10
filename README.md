@@ -73,16 +73,7 @@ import (
 QQ群: 312533472
 
 ## 文档
-代码下载下来后，放入 GOPATH 路径的 src 下面，可以在shell(windows 下面是 cmd) 里运行
-```sh
-godoc -http=:8080
-```
-
-然后在浏览器里地址栏输入
-```sh
-http://localhost:8080/
-```
-即可查看文档
+暂无，可以看参数注释很详细
 
 ## 授权(LICENSE)
 [wechat is licensed under the Apache Licence, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
